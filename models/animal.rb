@@ -42,6 +42,13 @@ class Animal
     SqlRunner.run(sql)
   end
 
+  def Animal.find(id)
+    sql = "SELECT * FROM animals WHERE id=#{id};"
+    animal = SqlRunner.run( sql )
+    result = Animal.new(animal.first)
+    return result
+  end
+
   # def Animal.find_breed( )
   #   sql = "SELECT * FROM animals WHERE breed = #{breed};"
   #   animals = SqlRunner.run(sql)
