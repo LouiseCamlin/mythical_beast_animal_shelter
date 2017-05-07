@@ -1,0 +1,18 @@
+<h2>Owner Details</h2>
+
+<p>Name: <%= @owner.name %></p>
+<p>Admission date: <%= @owner.animal.name %></p>
+<p>location: <%= @owner.location %></p>
+
+
+
+
+<form action="/owners/<%= @owner.id %>/edit" method="get">
+<input type="submit" value="edit"/>
+</form>
+
+<form action="/owners/<%= @owner.id %>/delete" method="post">
+<input type="submit" value="delete"/>
+</form>
+
+

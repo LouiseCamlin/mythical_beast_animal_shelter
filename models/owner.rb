@@ -18,10 +18,10 @@ class Owner
     return results.first['id'].to_i 
   end
 
-  def all()
+  def Owner.all()
     sql = "SELECT * FROM owners;"
     results = SqlRunner.run( sql )
-    return results.map { |hash| Owner.new( hash ) }
+    return results.map { |owners| Owner.new(owners) }
   end
 
   def delete()
@@ -37,6 +37,13 @@ class Owner
   def update()
     sql = "UPDATE owners SET ( name, location, animal_id) = ( '#{@name}', '#{@location}', #{@animal_id} ) WHERE id = #{@id};"
     SqlRunner.run(sql)
+  end
+
+  def Owner.find(id)
+    sql = "SELECT * FROM owners WHERE id=#{id};"
+    owner = SqlRunner.run(sql)
+    result = Owner.new(owner.first)
+    return result
   end
 
   def animal

@@ -1,0 +1,14 @@
+<h1>All our lovely owners</h1>
+
+<% @owners.each do |owner| %>
+
+<p>Name: <%= owner.name %></p>
+<p>Pet: <%= owner.animal.name %></p>
+
+
+
+
+<p><a href="/owners/<%= owner.id %>">Find out more</a></p>
+<hr/>
+
+<% end %>
