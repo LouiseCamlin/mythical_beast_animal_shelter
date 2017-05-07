@@ -17,7 +17,7 @@
       <label for="ready-for-select">Ready for adoption?:</label>
       <select id="ready-for-select" name="animal_id">
         <option value="true" <%= "selected" if @animal.ready_for_adoption == "true" %>>Yes</option>
-          <option value="false" <%= "selected" if @animal.ready_for_adoption == "false" %>>No</option>
+        <option value="false" <%= "selected" if @animal.ready_for_adoption == "false" %>>No</option>
       </select>
     </li>
 

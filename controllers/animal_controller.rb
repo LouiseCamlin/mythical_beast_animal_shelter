@@ -32,11 +32,11 @@ end
 post '/animals/:id' do
   @animal = Animal.new(params)
   @animal.update()
-  erb(:update)
+  erb(:"animals/update")
 end
 
 delete '/animals/:id' do
   @animal = Animal.find(params[:id])
   @animal.delete
-  erb(:destroy)
+  erb(:"animals/destroy")
 end
