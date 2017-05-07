@@ -7,18 +7,16 @@ Owner.delete_all
 
 animal1 = Animal.new({
   'name' => "Drogon",
-  'gender' => "male",
-  'admission_date' => "March 12 2017",
   'breed' => "dragon",
+  'admission_date' => "March 12 2017",
   'ready_to_adopt' => true
   })
 animal1.save()
 
 animal2 = Animal.new({
   'name' => "Rowlf",
-  'gender' => "male",
-  'admission_date' => "March 25 2017",
   'breed' => "dog",
+  'admission_date' => "March 25 2017",
   'ready_to_adopt' => true
   })
 animal2.save()

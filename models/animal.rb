@@ -5,18 +5,17 @@ class Animal
   attr_reader :name, :gender, :admission_date, :breed, :id, :ready_to_adopt
 
   def initialize(params)
-    @name = params["name"]
-    @gender = params["gender"]
-    @admission_date = params["admission_date"]
-    @breed = params["breed"]
     @id = params["id"].to_i if params["id"].to_i
+    @name = params["name"]
+    @breed = params["breed"]
+    @admission_date = params["admission_date"]
     @ready_to_adopt = params["ready_to_adopt"]
   end
 
   def save()
-    sql = "INSERT INTO animals (name, gender, admission_date, breed, ready_to_adopt) VALUES ( '#{@name}', '#{@gender}', '#{@admission_date}', '#{@breed}', '#{@ready_to_adopt}') RETURNING *;"
-    results = SqlRunner.run(sql)
-    return results.first['id'].to_i    
+    sql = "INSERT INTO animals (name, breed, admission_date, ready_to_adopt) VALUES ( '#{@name}', '#{@breed}','#{@admission_date}', '#{@ready_to_adopt}')  RETURNING id;"
+    animal_details = SqlRunner.run(sql)
+    @id = animal_details.first['id'].to_i    
   end
 
   def Animal.all()
@@ -36,8 +35,8 @@ class Animal
   end
   
   def update()
-    sql = "UPDATE animals SET (name, gender, admission_date, breed) =
-          ('#{@name}', '#{@gender}', '#{@admission_date}', '#{@breed}' '#{@ready_to_adopt}') 
+    sql = "UPDATE animals SET (name, breed, admission_date, ready_to_adopt) =
+          ( '#{@name}', '#{@breed}','#{@admission_date}', '#{@ready_to_adopt}') 
           WHERE id = #{@id};"
     SqlRunner.run(sql)
   end
