@@ -48,31 +48,15 @@ class Animal
     return result
   end
 
-  # def Animal.find_breed( )
-  #   sql = "SELECT * FROM animals WHERE breed = #{breed};"
-  #   animals = SqlRunner.run(sql)
-  #   paddy = animals.map { |animal| Animal.new(animal)}
-  #   return paddy
-  # end
 
-#   def Animal.find_breed(breed)
-#     sql = "SELECT * FROM animals WHERE breed= '#{@breed};"
-#     results = SqlRunner.run(sql)
-#     all_animals = Animal.all
-#     results.select { |}
-#   end
+  def Animal.find_breed(breed)
+    sql = "SELECT * FROM animals WHERE animals.breed= '#{breed}';"
+    animals = SqlRunner.run(sql)
+    result = animals.map { |animal| Animal.new(animal)}
+    return result
+  end
 
 
-# all_critters = Animal.all and then all_critters.select {|critter| critter.breed == target_breed }
-
-
- 
-#  def Animal.find_breed(breed)
-#   sql = "SELECT * FROM animals WHERE breed= '#{@breed};"
-#   animal_array = Animal.all
-  
-
-# end
 
   
 
