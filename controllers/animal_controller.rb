@@ -23,19 +23,18 @@ get "/animals/:id" do
   erb(:"animals/show")
 end
 
-
-get "animals/:id/edit" do
+get "/animals/:id/edit" do
   @animal = Animal.find(params[:id])
   erb(:"animals/edit")
 end
 
-post '/animals/:id' do
+post "/animals/:id" do
   @animal = Animal.new(params)
   @animal.update()
   erb(:"animals/update")
 end
 
-delete '/animals/:id' do
+post "/animals/:id/delete" do
   @animal = Animal.find(params[:id])
   @animal.delete
   erb(:"animals/destroy")

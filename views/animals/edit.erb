@@ -1,28 +1,26 @@
-<form action="/animals/<%= @animal.id%>" method="POST">
-  <ul>
-    <li>
-      <label for="name-field">Name:</label>
-      <input id="name-field" name="name" type="text" value="<%= @animal.name %>"/>
-    </li>
-    <li>
-      <label for="breed-field">Second Name:</label>
-      <input id="breed-field" type="text" name="breed" value="<%= @animal.breed %>">
-    </li>
-    <li>
-      <label for="date-admitted-field">Date admitted</label>
-      <input  type="text" id="date-admitted-field" name="date" value="<%= @animal.date_admitted %>">
-    </li>
+<h2>Update animal details</h2>
+<form action="/animals/<%= @animal.id %>" method="POST">
 
-    <li>
-      <label for="ready-for-select">Ready for adoption?:</label>
-      <select id="ready-for-select" name="animal_id">
-        <option value="true" <%= "selected" if @animal.ready_for_adoption == "true" %>>Yes</option>
-        <option value="false" <%= "selected" if @animal.ready_for_adoption == "false" %>>No</option>
-      </select>
-    </li>
+<ul>
+  <li>
+    <label for="name-field">Name:</label>
+    <input id="name-field" name="name" type="text" value="<%= @animal.name %>" />
+  </li>
+  <li>
+    <label for="breed-field">Breed:</label>
+    <input type="text" id="breed-field" name="breed" value="<%= @animal.breed %>"/>
+  </li>
+  <li>
+    <label for="date-admitted-field">Date admitted:</label>
+    <input type="text" id="date-admitted-field" name="admission_date" value="<%= @animal.admission_date %>"/>
+  </li>
+  
+  <li>
+    <label for="ready-to-adopt">Ready for adoption?</label>
+    <input type="checkbox" name="ready_to_adopt" />
 
-    <li>
-      <input type="submit" value="Update details">
-    </li>
-  s</ul>
+  </li>
+</ul>
+
+<input type="submit" value="Edit animal details">
 </form>
