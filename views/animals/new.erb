@@ -1,4 +1,4 @@
-<form action="/animals" method="GET">
+<form action="/animals" method="POST">
 
 <h2>Insert new animal details</h2>
 
@@ -13,11 +13,12 @@
   </li>
   <li>
     <label for="date-admitted-field">Date admitted:</label>
-    <input type="text" id="date-admitted-field" name="date-admitted">
+    <input type="text" id="date-admitted-field" name="admission_date">
   </li>
   
   <li>
-    
+    <label for="ready-to-adopt">Ready for adoption?</label>
+    <input type="checkbox" name="ready_to_adopt" />
 
   </li>
 </ul>

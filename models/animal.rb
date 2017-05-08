@@ -9,11 +9,11 @@ class Animal
     @name = params["name"]
     @breed = params["breed"]
     @admission_date = params["admission_date"]
-    @ready_to_adopt = params["ready_to_adopt"]
+    @ready_to_adopt = (params["ready_to_adopt"]) ? true : false
   end
 
   def save()
-    sql = "INSERT INTO animals (name, breed, admission_date, ready_to_adopt) VALUES ( '#{@name}', '#{@breed}','#{@admission_date}', '#{@ready_to_adopt}')  RETURNING id;"
+    sql = "INSERT INTO animals (name, breed, admission_date, ready_to_adopt) VALUES ( '#{@name}', '#{@breed}','#{@admission_date}', #{@ready_to_adopt})  RETURNING id;"
     animal_details = SqlRunner.run(sql)
     @id = animal_details.first['id'].to_i    
   end
