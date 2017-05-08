@@ -1,21 +1,20 @@
 <h1>All our lovely animals</h1>
 
-<p>
-<input type="text" name="search" placeholder="Search by breed">
-
-</p>
 
 
-<% @animals.each do |animal| %>
+<body>
+  <% @animals.each do |animal| %>
+  <p>Name: <%= animal.name %></p>
+  <p>Breed: <%= animal.breed %></p>
+  <p><a href="/animals/<%= animal.id %>">Find out more</a></p>
+  <hr/>
 
-<p>Name: <%= animal.name %></p>
-<p>Breed: <%= animal.breed %></p>
+  <% end %>
+</body>
+  
 
 
 
 
-<p><a href="/animals/<%= animal.id %>">Find out more</a></p>
-<hr/>
 
-<% end %>
 

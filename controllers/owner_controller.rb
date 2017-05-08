@@ -11,7 +11,6 @@ end
 post "/owners" do
   @owner = Owner.new(params)
   @owner.save
-
   erb(:"owners/create")
 end
 

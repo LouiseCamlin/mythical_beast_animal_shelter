@@ -1,0 +1,7 @@
+<% @animals.each do |animal| %>
+
+<p>Name: <%= animal.name %></p>
+<p>Breed: <%= animal.breed %></p>
+<p><a href="/animals/<%= animal.id %>">Find out more</a></p>
+
+<% end %>

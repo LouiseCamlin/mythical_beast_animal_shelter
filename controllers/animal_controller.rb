@@ -18,6 +18,11 @@ post "/animals" do
   erb(:"animals/create")
 end
 
+get "/animals/search" do
+  @animals = Animal.find_breed(params['breed'])
+  erb(:"animals/search")
+end
+
 get "/animals/:id" do 
   @animal = Animal.find(params[:id])
   erb(:"animals/show")
@@ -39,3 +44,7 @@ post "/animals/:id/delete" do
   @animal.delete
   erb(:"animals/destroy")
 end
+
+
+
+
