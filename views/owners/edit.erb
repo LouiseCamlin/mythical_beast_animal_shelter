@@ -1,0 +1,27 @@
+<h2>Edit owner details</h2>
+
+<ul>
+  <li>
+    <label for="name-field">Name:</label>
+    <input id="name-field" name="name" type="text" value="<%= @owner.name %>" />
+  </li>
+  <li>
+    <label for="location-field">Breed:</label>
+    <input type="text" id="location-field" name="location" value="<%= @owner.location %>"/>
+  </li>
+
+  <li>
+    <label for= "pet-field">Pet:</label>
+    <select id= "pet-field" name="animal_id">
+     <% @animals.each do |animal| %>
+      <option value="<%= animal.id %>">
+      <%= animal.name %>
+      </option>
+      <%end%>
+    </select>
+  </li>
+  
+  
+
+<input type="submit" value="Edit owner details">
+</form>

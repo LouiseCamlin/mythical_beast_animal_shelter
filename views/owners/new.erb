@@ -17,7 +17,7 @@
     <label for= "pet-field">Pet:</label>
     <select id= "pet-field" name="animal_id">
      <% @animals.each do |animal| %>
-      <option value=<%=animal.id %> >
+      <option value="<%=animal.id %>" >
       <%= animal.name %>
       </option>
       <%end%>
