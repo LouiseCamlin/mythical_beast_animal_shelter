@@ -37,7 +37,7 @@ post '/owners/:id' do
   erb(:"owners/update")
 end
 
-delete '/owners/:id' do
+post '/owners/:id/delete' do
   @owners = Owner.find(params[:id])
   @owners.delete
   erb(:"owners/destroy")
