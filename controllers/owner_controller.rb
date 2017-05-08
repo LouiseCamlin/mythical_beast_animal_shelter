@@ -27,12 +27,13 @@ end
 
 get "/owners/:id/edit" do
   @owner = Owner.find(params[:id])
+  @animals = Animal.all()
   erb(:"owners/edit")
 end
 
 post '/owners/:id' do
-  @owners = Owner.new(params)
-  @owners.update()
+  @owner = Owner.new(params)
+  @owner.update()
   erb(:"owners/update")
 end
 
