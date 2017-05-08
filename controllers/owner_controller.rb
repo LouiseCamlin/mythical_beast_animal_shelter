@@ -11,18 +11,21 @@ end
 post "/owners" do
   @owner = Owner.new(params)
   @owner.save
+
   erb(:"owners/create")
 end
 
 get '/owners/new' do
+  @animals = Animal.all()
   erb(:"owners/new")
 end
+
 get "/owners/:id" do 
   @owner = Owner.find(params[:id])
   erb(:"owners/show")
 end
 
-get "owners/:id/edit" do
+get "/owners/:id/edit" do
   @owner = Owner.find(params[:id])
   erb(:"owners/edit")
 end

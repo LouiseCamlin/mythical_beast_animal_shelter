@@ -1,6 +1,6 @@
-<form action="/owners" method="GET">
+<form action="/owners" method="POST">
 
-<h2>Insert new owner details</h2>
+<h2>Add new owner details</h2>
 
 <ul>
   <li>
@@ -8,17 +8,23 @@
     <input id="name-field" name="name" type="text"/>
   </li>
   <li>
-   
-  </li>
-  <li>
-   
+    <label for="location-field">Location:</label>
+    <input id="location-field" name="location" type="text"/>
   </li>
   
+   
   <li>
-    
-
+    <label for= "pet-field">Pet:</label>
+    <select id= "pet-field" name="animal_id">
+     <% @animals.each do |animal| %>
+      <option value=<%=animal.id %> >
+      <%= animal.name %>
+      </option>
+      <%end%>
+    </select>
   </li>
+
 </ul>
 
-<input type="submit" value="Add animal">
+<input type="submit" value="Add new owner">
 </form>
