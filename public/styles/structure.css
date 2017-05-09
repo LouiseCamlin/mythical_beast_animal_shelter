@@ -7,9 +7,11 @@ body {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 450px;
+    padding-top: 50px;
     overflow: hidden;
     background-color: #E8E3D8;
+    font-size: 
     
 
 }
@@ -39,15 +41,10 @@ h1 {
   padding-top: 14px;
 }
 
-h2 {
+h3 {
   padding-left: 14px;
 }
 
-h2.description {
-text-align: center;
-padding-bottom: 20px;
-
-}
 
 p {
   padding-left: 14px;
