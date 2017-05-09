@@ -5,6 +5,7 @@ require_relative('./controllers/owner_controller.rb')
 
 
 get '/home' do
+  @animals = Animal.all()
   erb(:index)
 end
 

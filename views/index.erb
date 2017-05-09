@@ -3,8 +3,12 @@
 <h2>Search for animals by breed:</h2>
 <form action= "/animals/search" method="GET">
   <select id= "breed-select" name="breed">
-    <option value="Unicorn">Unicorn</option>
-    <option value="dragon">Dragon</option>
+    <% @animals.each do |animal| %>
+         <option value="<%=animal.id %>" >
+         <%= animal.breed %>
+         </option>
+         <%end%>
+       </select>
     </select>
 <p>
     <input type="submit" value="Search">
