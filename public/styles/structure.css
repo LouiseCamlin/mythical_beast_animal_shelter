@@ -1,29 +1,44 @@
 body {
   font-family: 'Inknut Antiqua', serif; 
   letter-spacing: -0.05rem;
+  line-height: 140%;
   background-color: #E8E3D8;
+
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding-left: 450px;
-    padding-top: 50px;
+    padding-top: 30px;
     overflow: hidden;
     background-color: #E8E3D8;
     font-size: 
-    
-
 }
 
- li.index {
-    float: left;
-
+.welcome-container {
+  padding: 50px;
+  width: 500px;
+  border: 1px #FDF8EE;
+  background-color: #FDF8EE;
+  margin: 20px auto;
+  border-radius: 6px;
 }
+
+.header {
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+.index {
+  float: left;
+}
+
 
  li a {
     display: block;
-    color: 000000;
+    color: #000;
     text-align: center;
     padding: 14px 16px;
     text-align: center;
@@ -31,18 +46,19 @@ ul {
 
 }
 
-ul.new {
+.new {
   background-color: white;
 }
 
-h1 {
-  text-align: center;
-  padding-bottom: 14px;
-  padding-top: 14px;
+h2 {
+  line-height: 140%;
+  margin: 0 0 20px 0;
+  color: #59451D;
 }
 
 h3 {
   padding-left: 14px;
+  color: black;
 }
 
 

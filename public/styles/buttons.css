@@ -7,6 +7,9 @@ input[type=submit]{
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  font-family: 'Inknut Antiqua';
+  line-height: 140%;
+  font-size: 0.875rem;
 }
 
 

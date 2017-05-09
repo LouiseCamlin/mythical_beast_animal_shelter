@@ -1,17 +1,16 @@
-<h1> Welcome to Miss Louise's Home for Mythical Beasts database management</h1>
+<div class="welcome-container">
+<h2> Welcome to Miss Louise's Home for Mythical Beasts database management</h2>
 
 
-<h3>Search for animals by breed:</h3>
-
-  <form id = "index" action= "/animals/search" method="GET">
-    <select id= "breed-select" name="breed">
-      <% @animals.each do |animal| %>
-      <option value="<%=animal.breed %>" >
-      <%= animal.breed %>
-      </option>
-      <%end%>
-    </select>
-<p>
-    <input type="submit" value="Search">
- </form>
-</p>
+    <h3>Search for animals by breed:</h3>
+      <form id = "index" action= "/animals/search" method="GET">
+        <select id= "breed-select" name="breed">
+         <% @animals.each do |animal| %>
+         <option value="<%=animal.breed %>" >
+          <%= animal.breed %>
+         </option>
+          <%end%>
+        </select>
+       <input type="submit" value="Search">
+      </form>
+  </div>

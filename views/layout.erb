@@ -14,25 +14,30 @@
   
 </head>
 <body>
-  <nav>
-    <ul>
-      <li class="index">
-        <a href="/home">Home</a>
-      </li>
-      <li class="index">
-        <a href="/animals" class="index">All our animals</a>
-      </li>
-      <li class="index">
-        <a href="/owners" class="index">All our owners</a>
-      </li>
-      <li class="index">
-        <a href="/animals/new" class="index">Add a new animal</a>
-      </li>
-      <li class="index">
-        <a href="/owners/new" class="index">Add a new owner</a>
-      </li>
-    </ul>
-  </nav>
+  <header class="header">
+    <div class="logo">
+      <img src="/images/Mythical_Beasts_Logo.png">
+    </div>
+    <nav>
+      <ul>
+        <li class="index">
+          <a href="/home">Home</a>
+        </li>
+        <li class="index">
+          <a href="/animals" class="index">All our animals</a>
+        </li>
+        <li class="index">
+          <a href="/owners" class="index">All our owners</a>
+        </li>
+        <li class="index">
+          <a href="/animals/new" class="index">Add a new animal</a>
+        </li>
+        <li class="index">
+          <a href="/owners/new" class="index">Add a new owner</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   
   <%= yield %>
   </section>
