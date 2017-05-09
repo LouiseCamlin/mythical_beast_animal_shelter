@@ -8,7 +8,10 @@
 
 
 
-<p><a href="/owners/<%= owner.id %>">Find out more</a></p>
+
+<form method="GET" action="/owners/<%= owner.id %>">
+<input type="submit" value="Find out more">
+</form>
 <hr/>
 
 <% end %>

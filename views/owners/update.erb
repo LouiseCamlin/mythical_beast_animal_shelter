@@ -1,5 +1,7 @@
 <h2>Owner details succesfully updated!</h2>
 
 <body>
-  <a href="/owners/<%= @owner.id %>">Return to Owner details</a>
+  <form method="GET" action="/owners/<%= @owner.id %>">
+  <input type="submit" value="Return to Owner details">
+  </form>
 </body>
