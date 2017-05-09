@@ -18,8 +18,9 @@
   <li>
     <label for="ready-to-adopt">Ready for adoption?</label>
     <select id= "ready-to-adopt" name="ready_to_adopt">
-      <option value="Ready">Ready</option>
-      <option value="Not Ready">Not Ready</option>
+      <option value="Ready" <%= "selected" if @animal.ready_to_adopt == "Ready" %>>Ready</option>
+      <option value="Not Ready" <%= "selected" if @animal.ready_to_adopt == "Not Ready" %>>Not Ready</option>
+      
       </select>
 
   </li>
