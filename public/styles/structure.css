@@ -9,10 +9,9 @@ body {
 ul {
     list-style-type: none;
     margin: 0;
-    padding-left: 450px;
+    padding-left: 0;
     padding-top: 30px;
     overflow: hidden;
-    background-color: #E8E3D8;
     font-size: 
 }
 
@@ -25,24 +24,35 @@ ul {
   border-radius: 6px;
 }
 
+.logo {
+  float: left;
+}
+
 .header {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
+  overflow: hidden;
+  padding-top: 2rem;
+  max-width: 820px;
+}
+
+nav {
+  float: right;
 }
 
 
-.index {
-  float: left;
+
+nav li{
+  display: inline-block;
 }
 
 
  li a {
-    display: block;
     color: #000;
-    text-align: center;
     padding: 14px 16px;
     text-align: center;
     text-decoration: none;
+    font-size: 14px;
 
 }
 
