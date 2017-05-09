@@ -3,6 +3,11 @@ select {
 }
 
 input[type=text] {
+  
   width: 15%;
+}
 
+form {
+  padding-left: 16px;
+  padding-bottom: 16px;
 }

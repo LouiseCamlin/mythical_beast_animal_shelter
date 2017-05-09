@@ -41,8 +41,10 @@ h2 {
   padding-left: 14px;
 }
 
-form {
-  padding-left: 16px;
+h2.description {
+text-align: center;
+padding-bottom: 20px;
+
 }
 
 p {
