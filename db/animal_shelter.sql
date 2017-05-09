@@ -6,7 +6,7 @@ CREATE TABLE animals (
   name VARCHAR(255),
   breed VARCHAR(255),
   admission_date DATE,
-  ready_to_adopt BOOLEAN
+  ready_to_adopt VARCHAR(255)
 );
 
 

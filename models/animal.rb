@@ -9,11 +9,11 @@ class Animal
     @name = params["name"]
     @breed = params["breed"]
     @admission_date = params["admission_date"]
-    @ready_to_adopt = (params["ready_to_adopt"]) ? true : false
+    @ready_to_adopt = params["ready_to_adopt"]
   end
 
   def save()
-    sql = "INSERT INTO animals (name, breed, admission_date, ready_to_adopt) VALUES ( '#{@name}', '#{@breed}','#{@admission_date}', #{@ready_to_adopt})  RETURNING id;"
+    sql = "INSERT INTO animals (name, breed, admission_date, ready_to_adopt) VALUES ( '#{@name}', '#{@breed}','#{@admission_date}', '#{@ready_to_adopt}')  RETURNING id;"
     animal_details = SqlRunner.run(sql)
     @id = animal_details.first['id'].to_i    
   end
@@ -56,13 +56,27 @@ class Animal
     return result
   end
 
+  # def status
+  #   sql = "SELECT ready_to_adopt FROM animals where id= #{id} "
+  #   if @ready_to_adopt == "no"
+  #     return "Not Ready"
+  #   else
+  #     return "Ready"
+  #   end
+  #   animal = SqlRunner.run(sql)
+  #   return animal
+  # end
 
+  # def status()
+  #   animals = Animal.all
+  #   result = []
+  #   animals.each() do |animal| if animal.ready_to_adopt == "no"
+  #     result << animal
 
-  
-
-
-  
-    
+  #   end
+  # end
+  # return result
+  # end
 
   
 end

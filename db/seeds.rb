@@ -9,7 +9,7 @@ animal1 = Animal.new({
   'name' => "Drogon",
   'breed' => "dragon",
   'admission_date' => "March 12 2017",
-  'ready_to_adopt' => true
+  'ready_to_adopt' => "Not Ready"
   })
 animal1.save()
 
@@ -17,7 +17,7 @@ animal2 = Animal.new({
   'name' => "Rowlf",
   'breed' => "dog",
   'admission_date' => "March 25 2017",
-  'ready_to_adopt' => true
+  'ready_to_adopt' => "Ready"
   })
 animal2.save()
 
