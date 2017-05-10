@@ -1,6 +1,6 @@
 <h2>Owner Details</h2>
 
-
+<div class="show">
 <p>Name: <%= @owner.name %></p>
 <p>Pet: <%= @owner.animal.name %></p>
 <p>Location: <%= @owner.location %></p>
@@ -15,5 +15,6 @@
 <form action="/owners/<%= @owner.id %>/delete" method="POST">
 <input type="submit" value="delete" class="button" />
 </form>
+</div>  
 
 

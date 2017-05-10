@@ -1,4 +1,5 @@
 <h2>Animals matching that breed:</h2>
+<div class="show">
 <% @animals.each do |animal| %>
 
 <p>Name: <%= animal.name %></p>
@@ -7,5 +8,6 @@
 <input type="submit" value="Find out more" class="button">
 </form>
 <hr>
+</div>
 
 <% end %>
