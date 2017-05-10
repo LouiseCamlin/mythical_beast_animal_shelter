@@ -1,17 +1,14 @@
 <div class="welcome-container">
-<h2> Welcome to Miss Louise's Home for Mythical Beasts database management</h2>
+
+  <h2> Welcome to Miss Louise's Home for Mythical Beasts database management</h2>
 
 
-    <h3>Search for animals by breed:</h3>
-      <form action= "/animals/search" method="GET">
-         <% @animals.each do |animal| %>
-         <option value="<%=animal.breed %>" >
-         </option>
-          <%end%>
-  
-       <input type="text" name="breed" size="21" maxlength="120">
-       <input type="submit" value="search" class="tfbutton">
-      </form>
-  </div>
+  <h3>Search for animals by breed:</h3>
+    <form action= "/animals/search" method="GET">
+
+     <input type="text" name="breed" class="searchbox">
+     <input type="submit" value="search">
+    </form>
+</div>
 
  
