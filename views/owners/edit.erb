@@ -1,28 +1,28 @@
 <h2>Edit owner details</h2>
 <form action="/owners/<%= @owner.id %>" method="POST">
 
-<ul class="new">
-  <li>
-    <label for="name-field">Name:</label>
-    <input id="name-field" name="name" type="text" value="<%= @owner.name %>" />
-  </li>
-  <li>
-    <label for="location-field">Location:</label>
-    <input type="text" id="location-field" name="location" value="<%= @owner.location %>"/>
-  </li>
+<div class="new">
+  <ul>
+    <li>
+      <label for="name-field">Name:</label>
+      <input id="name-field" name="name" type="text" value="<%= @owner.name %>" />
+    </li>
+    <li>
+      <label for="location-field">Location:</label>
+      <input type="text" id="location-field" name="location" value="<%= @owner.location %>"/>
+    </li>
+    <li>
+      <label for= "pet-field">Pet:</label>
+      <select id= "pet-field" name="animal_id">
+       <% @animals.each do |animal| %>
+        <option value="<%= animal.id %>">
+        <%= animal.name %>
+        </option>
+        <%end%>
+      </select>
+    </li>
+  </ul>
+</div>
 
-  <li>
-    <label for= "pet-field">Pet:</label>
-    <select id= "pet-field" name="animal_id">
-     <% @animals.each do |animal| %>
-      <option value="<%= animal.id %>">
-      <%= animal.name %>
-      </option>
-      <%end%>
-    </select>
-  </li>
-  
-  
-
-<input type="submit" value="Edit owner details"/>
+<input type="submit" value="Edit owner details" class="button" />
 </form>

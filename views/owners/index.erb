@@ -1,4 +1,4 @@
-<h1>All our lovely owners</h1>
+<h2>All our lovely owners</h2>
 
 <% @owners.each do |owner| %>
 
@@ -10,7 +10,7 @@
 
 
 <form method="GET" action="/owners/<%= owner.id %>">
-<input type="submit" value="Find out more">
+<input type="submit" value="Find out more" class="button">
 </form>
 <hr/>
 
