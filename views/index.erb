@@ -3,14 +3,15 @@
 
 
     <h3>Search for animals by breed:</h3>
-      <form id = "index" action= "/animals/search" method="GET">
-        <select id= "breed-select" name="breed">
+      <form action= "/animals/search" method="GET">
          <% @animals.each do |animal| %>
          <option value="<%=animal.breed %>" >
-          <%= animal.breed %>
          </option>
           <%end%>
-        </select>
-       <input type="submit" value="Search">
+  
+       <input type="text" name="breed" size="21" maxlength="120">
+       <input type="submit" value="search" class="tfbutton">
       </form>
   </div>
+
+ 
