@@ -50,33 +50,11 @@ class Animal
 
 
   def Animal.find_breed(breed)
-    sql = "SELECT * FROM animals WHERE animals.breed= '#{breed}';"
+    sql = "SELECT * FROM animals WHERE breed= '#{breed}';"
     animals = SqlRunner.run(sql)
     result = animals.map { |animal| Animal.new(animal)}
     return result
   end
-
-  # def status
-  #   sql = "SELECT ready_to_adopt FROM animals where id= #{id} "
-  #   if @ready_to_adopt == "no"
-  #     return "Not Ready"
-  #   else
-  #     return "Ready"
-  #   end
-  #   animal = SqlRunner.run(sql)
-  #   return animal
-  # end
-
-  # def status()
-  #   animals = Animal.all
-  #   result = []
-  #   animals.each() do |animal| if animal.ready_to_adopt == "no"
-  #     result << animal
-
-  #   end
-  # end
-  # return result
-  # end
 
   
 end

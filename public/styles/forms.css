@@ -1,10 +1,26 @@
+input {
+  font-family: 'Inknut Antiqua';
+  line-height: 140%;
+  vertical-align: middle;
+}
+
 input[type=text] {
   outline: none;
+}
+
+.searchbox {
+  width: 75%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #59451D;
+  font-size: 1.125rem;
 }
 
 input[type=text]:focus{
   border: 2px solid black;
 }
+
+
 
 select {
   font-size: 0.9em;
@@ -36,3 +52,4 @@ form {
   margin: 20px auto;
   border-radius: 6px;
 }
+

@@ -5,15 +5,12 @@ input[type=submit]{
   border-radius: 4px;
   padding: 14px 30px;
   text-decoration: none;
-  margin: 4px 2px;
   cursor: pointer;
-  font-family: 'Inknut Antiqua';
-  line-height: 140%;
   font-size: 0.875rem;
 }
 
 .button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24);
 }
 
 .form-inline {
