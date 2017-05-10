@@ -5,13 +5,11 @@
   <p>Pet: <%= @owner.animal.name %></p>
   <p>Location: <%= @owner.location %></p>
 
-  <form action="/owners/<%= @owner.id %>/edit" method="GET">
+  <form action="/owners/<%= @owner.id %>/edit" method="GET" class="form-inline">
   <input type="submit" value="edit" class="button" />
   </form>
 
-  <form action="/owners/<%= @owner.id %>/delete" method="POST">
+  <form action="/owners/<%= @owner.id %>/delete" method="POST" class="form-inline">
   <input type="submit" value="delete" class="button" />
   </form>
 </div>  
-
-
