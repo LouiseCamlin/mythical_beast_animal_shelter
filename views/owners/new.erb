@@ -1,31 +1,32 @@
-<form class= "display" action="/owners" method="POST">
-
-<h2>Add new owner details</h2>
 <div class="new view-container">
-  <ul>
-    <li>
-      <label for="name-field">Name:</label>
-      <input id="name-field" name="name" type="text"/>
-    </li>
-    <li>
-      <label for="location-field">Location:</label>
-      <input id="location-field" name="location" type="text"/>
-    </li>
-    
-     
-    <li>
-      <label for= "pet-field">Pet:</label>
-      <select id= "pet-field" name="animal_id">
-       <% @animals.each do |animal| %>
-        <option value="<%=animal.id %>" >
-        <%= animal.name %>
-        </option>
-        <%end%>
-      </select>
-    </li>
-  </ul>
+  <form action="/owners" method="POST">
+
+  <h2>Add new owner details</h2>
+
+    <ul>
+      <li>
+        <label for="name-field">Name:</label>
+        <input id="name-field" name="name" type="text"/>
+      </li>
+      <li>
+        <label for="location-field">Location:</label>
+        <input id="location-field" name="location" type="text"/>
+      </li>
+      
+       
+      <li>
+        <label for= "pet-field">Pet:</label>
+        <select id= "pet-field" name="animal_id">
+         <% @animals.each do |animal| %>
+          <option value="<%=animal.id %>" >
+          <%= animal.name %>
+          </option>
+          <%end%>
+        </select>
+      </li>
+    </ul>
 
 
-<input type="submit" value="Add new owner" class="button">
-</form>
+  <input type="submit" value="Add new owner" class="button">
+  </form>
 </div>

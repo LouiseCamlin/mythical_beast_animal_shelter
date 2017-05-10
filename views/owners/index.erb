@@ -1,19 +1,19 @@
 <div class="view-container">
-<h2>All our lovely owners</h2>
+  <h2>All our lovely owners</h2>
 
-<% @owners.each do |owner| %>
+  <% @owners.each do |owner| %>
 
-<p>Name: <%= owner.name %></p>
-<p>Pet: <%= owner.animal.name %></p>
-
-
+  <p>Name: <%= owner.name %></p>
+  <p>Pet: <%= owner.animal.name %></p>
 
 
 
-<form method="GET" action="/owners/<%= owner.id %>">
-<input type="submit" value="Find out more" class="button">
-</form>
-<hr/>
+
+
+  <form method="GET" action="/owners/<%= owner.id %>">
+  <input type="submit" value="Find out more" class="button">
+  </form>
+  <hr/>
 
 
 <% end %>

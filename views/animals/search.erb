@@ -1,13 +1,15 @@
-<h2>Animals matching that breed:</h2>
-<div class="show">
-<% @animals.each do |animal| %>
+<div class="show view-container">
+  <h2>Animals matching that breed:</h2>
 
-<p>Name: <%= animal.name %></p>
-<p>Breed: <%= animal.breed %></p>
-<form method="GET" action="/animals/<%= animal.id %>">
-<input type="submit" value="Find out more" class="button">
-</form>
-<hr>
+  <% @animals.each do |animal| %>
+
+  <p>Name: <%= animal.name %></p>
+  <p>Breed: <%= animal.breed %></p>
+  <form method="GET" action="/animals/<%= animal.id %>">
+  <input type="submit" value="Find out more" class="button">
+  </form>
+  <hr>
+  
+
+  <% end %>
 </div>
-
-<% end %>
